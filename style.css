@@ -1,8 +1,14 @@
 /* can't turn body into grid  */
+
+/* how to insert image next to p element and shrink
+image to height of p size - have to nest img in a
+and then manually set <a> height to px or rem/em. */
+
+/* how to align image nested in a element and p element. align-item: center the parent (flex) of the a and p element  */
 .container {
   display: grid;
   grid-template-columns: 2fr 6fr;
-  grid-template-rows: 1fr 2fr 10fr;
+  grid-template-rows: 1fr 1fr 10fr;
 }
 
 div {
@@ -14,14 +20,19 @@ div {
 .sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / 4;
+  
 }
 
 .topbar {
   grid-column: 2 / 4;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
 }
 
 .actionbar {
   grid-column: 2 / 4;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
 }
 
 .main-content {
@@ -43,4 +54,47 @@ div {
 .news-panel {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+}
+
+ul {
+  list-style: none;
+}
+
+.dashboard-head {
+  display: flex;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+   
+  }
+
+li,
+.search-section,
+.user-info-section,
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+}
+
+p {
+  display: inline-block;
+  
+}
+
+.project-actions {
+  display: flex;
+  justify-content:end;
 }
