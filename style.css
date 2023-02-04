@@ -1,3 +1,5 @@
+/* next commit: download logo, font, and palette.  */
+
 /* can't turn body into grid  */
 
 /* how to insert image next to p element and shrink
@@ -5,6 +7,12 @@ image to height of p size - have to nest img in a
 and then manually set <a> height to px or rem/em. */
 
 /* how to align image nested in a element and p element. align-item: center the parent (flex) of the a and p element  */
+
+* {
+  font-family: Roboto, Times New Roman;
+/*  colors: #0ea5e9 -blue, #fbbf24 - orange, #cbd5e1 - grey */
+}
+
 .container {
   display: grid;
   grid-template-columns: 2fr 6fr;
@@ -97,4 +105,9 @@ p {
 .project-actions {
   display: flex;
   justify-content:end;
+}
+
+.project-content {
+  font-weight:300;
+  font-style: italic;
 }
